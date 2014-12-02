@@ -2,8 +2,8 @@ NAME
     App::ParseNetstat - Parse netstat output
 
 VERSION
-    This document describes version 0.10 of App::ParseNetstat (from Perl
-    distribution App-ParseNetstat), released on 2014-12-01.
+    This document describes version 0.11 of App::ParseNetstat (from Perl
+    distribution App-ParseNetstat), released on 2014-12-02.
 
 HOMEPAGE
     Please visit the project's homepage at

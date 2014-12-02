@@ -1,7 +1,7 @@
 package App::ParseNetstat;
 
-our $DATE = '2014-12-01'; # DATE
-our $VERSION = '0.10'; # VERSION
+our $DATE = '2014-12-02'; # DATE
+our $VERSION = '0.11'; # VERSION
 
 1;
 # ABSTRACT: Parse netstat output
@@ -18,7 +18,7 @@ App::ParseNetstat - Parse netstat output
 
 =head1 VERSION
 
-This document describes version 0.10 of App::ParseNetstat (from Perl distribution App-ParseNetstat), released on 2014-12-01.
+This document describes version 0.11 of App::ParseNetstat (from Perl distribution App-ParseNetstat), released on 2014-12-02.
 
 =head1 HOMEPAGE
 

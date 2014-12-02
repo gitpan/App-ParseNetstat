@@ -3,8 +3,8 @@
 # Note: This script is a CLI interface to Riap function /Parse/Netstat/parse_netstat
 # and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.03
 
-our $DATE = '2014-12-01'; # DATE
-our $VERSION = '0.10'; # VERSION
+our $DATE = '2014-12-02'; # DATE
+our $VERSION = '0.11'; # VERSION
 
 use 5.010001;
 use strict;
@@ -31,7 +31,7 @@ parse-netstat - Parse the output of "netstat" command
 
 =head1 VERSION
 
-This document describes version 0.10 of parse-netstat (from Perl distribution App-ParseNetstat), released on 2014-12-01.
+This document describes version 0.11 of parse-netstat (from Perl distribution App-ParseNetstat), released on 2014-12-02.
 
 =head1 SYNOPSIS
 
@@ -40,11 +40,13 @@ This document describes version 0.10 of parse-netstat (from Perl distribution Ap
 =head1 DESCRIPTION
 
 This program support several flavors of netstat. The default flavor is C<linux>.
-See C<--flavor> on how to set flavor.
+Use C<--flavor> to select which flavor you want.
 
 Since different flavors provide different fields and same-named fields might
-contain data in different format, please see the sample parse output for each
-flavor you want to support and adjust accordingly.
+contain data in different format, and also not all kinds of possible output from
+a single flavor are supported, please see the sample parse output for each
+flavor (in corresponding C<Parse::Netstat::*> per-flavor module) you want to use
+and adjust accordingly.
 
 =head1 OPTIONS
 
@@ -102,20 +104,17 @@ Valid values:
 
  ["linux", "solaris", "freebsd", "win32"]
 
-For Linux, it supports the output of `netstat -an` or `netstat -anp`.
-
-For FreeBSD, it supports `netstat` or `netstat -an`.
-
-For Solaris, it supports `netstat`.
-
-For Windows, it supports `netstat` or `netstat -an` or `netstat -anp`.
-
-
 =item B<--no-tcp>
+
+Do not parse TCP connections.
 
 =item B<--no-udp>
 
+Do not parse UDP connections.
+
 =item B<--no-unix>
+
+Do not parse Unix socket connections.
 
 =item B<--output>=I<s>*
 
